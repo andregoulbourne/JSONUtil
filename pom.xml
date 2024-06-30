@@ -3,12 +3,12 @@
 	<groupId>com.andre</groupId>
 	<artifactId>JSONUtil</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 	<properties>
 		<maven.compiler.target>17</maven.compiler.target>
 		<maven.compiler.source>17</maven.compiler.source>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -16,5 +16,25 @@
 			<version>1.2.17</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>test</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>src</directory>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>test</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
+
+	</build>
 
 </project>
