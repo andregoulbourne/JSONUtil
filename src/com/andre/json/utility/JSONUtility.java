@@ -167,7 +167,12 @@ public class JSONUtility {
 				Method setter
 				  = jsonModel.getClass().getMethod("set"+ CustomStringUtil.capitalLizeFirstLetter(jsonField.getName()), jsonField.getType());
 				
-				Object fieldResult = JSONUtility.getJSONData(propertyJSON, jsonField.getJsonFieldName()).get(0);
+				var result =  JSONUtility.getJSONData(propertyJSON, jsonField.getJsonFieldName()); 
+				Object fieldResult = "";
+				if(result.isEmpty() && String.class != jsonField.getType())
+					fieldResult	= "0";
+				else
+					fieldResult = result.get(0);
 				
 				if(String.class == jsonField.getType()) 
 					fieldResult = santizeResult((String) fieldResult);
