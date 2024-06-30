@@ -102,6 +102,7 @@ public class JSONUtility {
 				countOfOpeningCurlBraces=0;
 				countOfClosingCurlBraces=0;
 				isAnIntegerField = false;
+				isStringField = false;
 			}
 		}
 		
