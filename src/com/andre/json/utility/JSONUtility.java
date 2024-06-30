@@ -171,7 +171,7 @@ public class JSONUtility {
 				Object fieldResult = "";
 				if(result.isEmpty() && String.class != jsonField.getType())
 					fieldResult	= "0";
-				else
+				else if(!result.isEmpty())	
 					fieldResult = result.get(0);
 				
 				if(String.class == jsonField.getType()) 
