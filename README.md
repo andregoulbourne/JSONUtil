@@ -1,5 +1,5 @@
 # JSONUtil
-An libary based in java for reading json strings.
+A libary based in java for reading json strings.
 Publishable to maven repository and containerized using docker.
 
 # Technologies Used
@@ -29,6 +29,7 @@ mvn install:install-file -Dfile=${pathToJSONJar} -DgroupId=com.andre -DartifactI
 
 ### Sample Code
 ![image](https://github.com/user-attachments/assets/d04fd14a-16ea-47a8-8978-fefc5c6fdd6d)
+
 Params
 json string
 Input(attribute)
