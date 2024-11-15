@@ -4,15 +4,15 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
-
 import com.andre.util.MetaModel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class JSONUtility {
 	private JSONUtility() {
 	}
 	
-	private static final Logger logger = Logger.getLogger(JSONUtility.class);
+	private static final Logger logger = LogManager.getLogger(JSONUtility.class);
 	
 	public static List<String> getJSONData(String input, String field){
 		var result = new ArrayList<String>();
